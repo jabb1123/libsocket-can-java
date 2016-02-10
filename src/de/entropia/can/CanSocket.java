@@ -136,6 +136,10 @@ public final class CanSocket implements Closeable {
         public CanId(final int address) {
             _canId = address;
         }
+
+	public int value() {
+	    return _canId;
+        }
         
         public boolean isSetEFFSFF() {
             return _isSetEFFSFF(_canId);
