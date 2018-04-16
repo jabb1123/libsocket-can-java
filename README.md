@@ -1,14 +1,14 @@
 # How it worked for me
 I've found no documentation how to use the entropia libsocket-can-java JNI-Library, so my solution (running with MCP 2515 module) written down:
 
-Get SocketCan running on the Pi, so it shows up "can0" interface in ifconfig. You will find a tutorial for this. If it is running, do the following:
+Get SocketCan running on the Pi, so it shows up "can0" interface in `ifconfig`. You will find a tutorial for this. If it is running, do the following:
 
 1. Clone the libsocket-can-java Library to the Raspberry Pi 3 with `git clone` (There is a Makefile in the cloned directory. It contains all info to compile the C Library as an .so "Shared Library")
 2. Compile it with commandline `make` (This requires at least a C compiler like gcc)
-3. The file lib/libjni_socketcan.so was created. Copy this shared library file to /usr/lib. Linux and the Java programm will find it there now.
+3. In the folder the file `lib/libjni_socketcan.so` was created. Copy this shared library file to `/usr/lib`. Linux and the Java programm will find it there now.
 4. Create a Java program to test it.
 
-In Java you import/include the CanSocket.java class to your project. An example how you can use it:
+In Java you import the `CanSocket.java` class to your project. An example how you can use it:
 
 ## Java Example
 ```java
