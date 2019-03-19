@@ -1,0 +1,11 @@
+language: c
+script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: ebKWQ/QvCCumu0rWA3BGn/kHs/y3Taydr3xaI8SjqGfGEYAc6pYqA2xG7VvsAEq0gAd8CsxoynuiaFMdFxpHlq8CVX+6GGWrVtb6tGFjNFFaCG9cnneXb7GO2KeO5rP/532rppW6cJG/AWbjuulUrrlcEkJ24Cv/iHJZE2xmTq2BuPOcfX6ROc1NspHGVfYjpEbmOSkiT8och/yN4gNqsGASjnTyZH0nj/nzo1fh4oDexEB1AdDU5H1uzsDlQWIFaWOLH81QoOq6+LwBbcDlFY5UG3qvVxwjLvm+8Bm/SEzebHCiFi8kAS/YpEAE39i2E4P7fA4ouCWoWfgP8FaYwsLa+cUPHDGZDBC2+IxZZvimrDDvf+CzbZsEzwenhbc8d/7YFsGUknLM+TuGLQNpW72YizKNKZEOLamjhCtS0F+HzLvreaTTDrr3PIrMsfyi9qJSHQPiUQOiaFiveCjB5de5tCbKqT9j7G1GOnAoiMZnnDqXUieIKm9AGKAc1SeiNrTkt2ltXuKSLoEjgFJ1VIaRBMdDPjNKt5Tp2+xf2aFQ6rcGE4Gw4qDRN+B6xw6SBPv0qXScmEBdZPKXFLzGTknY4vKELfWZ/Nbg59Lc3jGEArPxZwW2fCNP0YiuZxti9O9GTnRureZhT7PbCsySQ/ijtojY+z88rDl+FtPVBKw=
+  file: dist/libsocket-can-java.jar
+  skip_cleanup: true
+  on:
+    repo: egribnau/libsocket-can-java
+    tags: true
